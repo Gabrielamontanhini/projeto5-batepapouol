@@ -7,9 +7,12 @@ function mostrarMensagensDoChat(){
     const chat = document.querySelector('ul');
     chat.innerHTML= '';
     for (let i=0; i<mensagensDoChat.length; i++){
-        let template = `<li>${mensagensDoChat[i].name} ${mensagensDoChat[i].text} </li>`
+        let template = `<li class="message">${mensagensDoChat[i].time} ${mensagensDoChat[i].from} para Todos: ${mensagensDoChat[i].text} </li>`
+        chat.innerHTML = chat.innerHTML  + template;
     }
+
 }
+
 function entrarNoChat(){
 
     let nomeDoUsuario= {
@@ -65,11 +68,15 @@ function exibirMensagem(){
     mostrarAsMsgs.catch(naoVaiMostrar);
 }
 
-function mostraElas(response){
-    console.log(response.data);
-    let mensagensDoChat = response.data;
+function mostraElas(resposta){
+    console.log(resposta.data);
+    var mensagensDoChat = resposta.data;
 }
 
-function naoVaiMostrar(response){
+function naoVaiMostrar(resposta){
     console.log("Deu erro")
 }
+
+
+entrarNoChat()
+mostrarMensagensDoChat()

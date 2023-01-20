@@ -61,11 +61,14 @@ li{
     flex-direction: row;
     align-items: center;
     margin-top: 4px;
+   
+    border-radius: 2px;
 }
+
 .evento{
     background-color: #DCDCDC;
 }
-.todos{
+.message{
     background-color: #FFFFFF;
 }
 .privado{

@@ -1,0 +1,73 @@
+.container{
+   font-family:  'Roboto', sans-serif;
+    margin: auto;
+    margin-top: 30px;
+    width: 375px;
+    height: 667px;
+    background-color: cornflowerblue;
+}
+main{
+    height: 507px;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22px;
+    margin-right: 24px;
+}
+header ion-icon{
+    font-size: 48px;
+}
+header, footer{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: whitesmoke;
+}
+header{
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+footer{
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ion-icon{
+    font-size: 35px;
+    margin-right: 15px;
+}
+input{
+    height: 35px;
+    width: 65%;
+    margin-left: 15px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.hidden{
+    display: none;
+}
+
+li{
+    list-style-type: none;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+}
+.evento{
+    background-color: #DCDCDC;
+}
+.todos{
+    background-color: #FFFFFF;
+}
+.privado{
+    background-color: #FFDEDE;
+}

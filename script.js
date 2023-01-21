@@ -64,13 +64,14 @@ function mensagemNaoFoi(responde){
 
 function exibirMensagem(){
     let mostrarAsMsgs = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages")
-    mostrarAsMsgs.then(mostraElas);
+    mostrarAsMsgs.then(res => mostraElas(res));
     mostrarAsMsgs.catch(naoVaiMostrar);
 }
 
-function mostraElas(resposta){
-    console.log(resposta.data);
-    var mensagensDoChat = resposta.data;
+function mostraElas(r){
+    console.log(r.data);
+    mensagensDoChat = r.data;
+    mostrarMensagensDoChat()
 }
 
 function naoVaiMostrar(resposta){
@@ -79,4 +80,3 @@ function naoVaiMostrar(resposta){
 
 
 entrarNoChat()
-mostrarMensagensDoChat()

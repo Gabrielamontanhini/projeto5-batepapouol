@@ -65,7 +65,12 @@ li{
    
     border-radius: 2px;
 }
-
+.tempo{
+    color: #AAAAAA;
+}
+.nome{
+    font-weight: 700;
+}
 .status{
     background-color: #DCDCDC;
 }

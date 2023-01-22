@@ -7,24 +7,25 @@ const chat = document.querySelector('ul');
 
 
 function mostrarMensagensDoChat() {
+    exibirMensagem() 
     console.log("templatando as mensagens")
     chat.innerHTML = '';
     for (let i = 0; i < mensagensDoChat.length; i++) {
         if (mensagensDoChat[i].type === "status") {
-            let template = `<li class="status" data-test="message">${
+            let template = `<li class="status" data-test="message"><span class="tempo"> (${
                 mensagensDoChat[i].time
-            } ${
+            }) </span> <span class="nome">&nbsp${
                 mensagensDoChat[i].from
-            } ${
+            }&nbsp</span> ${
                 mensagensDoChat[i].text
             } </li>`
             chat.innerHTML = chat.innerHTML + template;
         } else {
-            let template = `<li class="message" data-test="message">${
+            let template = `<li class="message" data-test="message"><span class="tempo"> (${
                 mensagensDoChat[i].time
-            } ${
+            })</span> <span class="nome">&nbsp${
                 mensagensDoChat[i].from
-            } para Todos: ${
+            }&nbsp</span> para Todos: ${
                 mensagensDoChat[i].text
             } </li>`
             chat.innerHTML = chat.innerHTML + template;
